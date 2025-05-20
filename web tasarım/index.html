@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius'tan Fahrenheit'e Dönüştürücü</title>
+    <style>
+        /* Sayfa düzenlemeleri */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Celsius'tan Fahrenheit'e Dönüştürücü</h1>
+<!-- Kullanıcıdan Celsius değeri almak için input ve buton -->
+<label for="celsius">Celsius:</label>
+<input type="number" id="celsius" placeholder="Celsius giriniz">
+<button onclick="convertToFahrenheit()">Dönüştür</button>
+<!-- Dönüştürülen sonucu göstermek için paragraf -->
+<p id="result"></p>
+
+<script>
+    // Celsius sıcaklık birimini Fahrenheit birimine dönüştüren fonksiyon
+    function celsiusToFahrenheit(celsius) {
+        return (celsius * 9 / 5) + 32;
+    }
+
+    // Butona tıklandığında çağrılan fonksiyon
+    function convertToFahrenheit() {
+        // Input alanından Celsius değerini al
+        let celsius = document.getElementById('celsius').value;
+        // Celsius değerini Fahrenheit'e dönüştür
+        let fahrenheit = celsiusToFahrenheit(celsius);
+        // Sonucu ekranda göster
+        document.getElementById('result').innerText = `${celsius}°C = ${fahrenheit.toFixed(2)}°F`;
+    }
+</script>
+</body>
+</html>

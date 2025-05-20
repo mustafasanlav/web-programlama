@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>ANKET</title>
+
+    <style>
+        .container{
+            text-align: center;
+            background: #ffae00;
+            padding-bottom: 20px;
+            border: 1px solid black;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #3048a8;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+
+
+
+        #evetButton{
+            text-decoration: none;
+
+            color: white;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Maaş Zammı Anketi</h1>
+        <div class="question">
+            <p>Şu anki ücretinizden memnun musunuz?</p>
+            <div>
+                <button type="button" ><a id="evetButton" href="message.html">EVET</a></button>
+                <button type="button" id="hayirButton">HAYIR</button>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+       let button =  document.getElementById("hayirButton")//öğeyi seçmeyi sağlıyor
+       button.addEventListener("mouseover",function ()//olay gerçekleştiğinde çalışacak bir işlev eklemeyi sağlar
+        {
+
+           let konum1 = Math.round(Math.random()*550) + 75 ;//rastgele bir sayı üretiyor
+           let konum2 = Math.round(Math.random()*550) + 75 ;//rastgele bir sayı üretiyor
+           button.style.position = "absolute";//diğer içeriklerden bağımsız konumunun olacağını sağladık
+
+           button.style.left = konum1 + "px";
+           button.style.top = konum2 + "px";
+           //burda da butonun kaçmasını sağladık
+
+
+       });
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+.baslık{
+    background: forestgreen;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+.ogrenciler{
+    display: flex;
+    background-color: #3a374f;
+}
+.flex-item{
+    background-color: midnightblue;
+    color: white;
+    padding:20px;
+    font-size: 30px;
+}
+.liste{
+    background-color: limegreen;
+
+
+
+}
+ul>li{
+    background: forestgreen;
+    padding: 5px;
+
+
+
+
+}
+a{
+    color:white;
+    text-decoration: none;
+}
+.ana{
+    color:limegreen;
+    text-shadow: 2px 2px 4px rgba(64,164,64,0.7);
+    text-align: center;
+    font-size: 44px;
+    padding: 45px;
+}

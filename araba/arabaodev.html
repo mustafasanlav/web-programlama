@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resmi Kontrol Tuşları ile Hareket Ettirme</title>
+    <style>
+
+        #image {
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <img id="image" src="car.jpeg" width="100" height="100">
+
+
+<script>
+    const image = document.getElementById('image');
+    let x = 0;
+    let y = 0
+
+    function move(direction) {
+        switch (direction) {
+            case 'ArrowUp':
+                y -= 10;
+                break;
+            case 'ArrowDown':
+                y += 10;
+                break;
+            case 'ArrowLeft':
+                x -= 10;
+                break;
+            case 'ArrowRight':
+                x += 10;
+                break;
+        }
+        image.style.top = y + 'px';
+        image.style.left = x + 'px';
+    }
+
+    document.addEventListener('keydown', function(event) {
+        move(event.key);
+    });
+</script>
+
+</body>
+</html>

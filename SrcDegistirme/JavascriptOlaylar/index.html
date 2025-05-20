@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript Olaylar</title>
+</head>
+<body>
+
+    <img id="foto" src="somurt.webp" alt="somurt" height="300px">
+
+    <button onclick="srcDegis()">değiştir</button>
+
+    <script>
+        function srcDegis(){
+            let fotograf = document.getElementById("foto");
+
+            if(fotograf.alt == "somurt")
+            {
+                fotograf.src  = "smile.png";
+                fotograf.alt = "gul";
+            }
+            else {
+                fotograf.src = "somurt.webp";
+                fotograf.alt = "somurt";
+
+            }
+        }
+    </script>
+</body>
+</html>
